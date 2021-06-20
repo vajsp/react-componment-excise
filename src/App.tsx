@@ -1,20 +1,33 @@
-import './styles/index.scss';
-import Button from './components/Button/button';
+import './styles/index.scss'
+import Button from './components/Button/button'
+import { Menu } from './components/Menu/menu'
+import { MenuItem } from './components/Menu/menulItem'
 
 function App() {
   return (
     <div className="App">
-      <Button className="nihao" disabled>Hello</Button>
-      <Button btnType='primary' size='lg' autoFocus onClick={() => {
-        alert(123)
-      }}>
+      <Menu defaultIndex={0}>
+        <MenuItem>cool link</MenuItem>
+      </Menu>
+
+      <Button className="nihao" disabled>
         Hello
       </Button>
-      <Button btnType='link' href="https://www.baidu.com">
+      <Button
+        btnType="primary"
+        size="lg"
+        autoFocus
+        onClick={() => {
+          alert(123)
+        }}
+      >
+        Hello
+      </Button>
+      <Button btnType="link" href="https://www.baidu.com">
         Hello
       </Button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

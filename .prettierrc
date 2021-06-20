@@ -1,0 +1,11 @@
+{
+  "semi": false,
+  "arrowParens": "always",
+  "singleQuote": true,
+  "end_of_line": "auto",
+  "no-console": false,
+  "no-case-declarations": false,
+  "no-inner-declarations": false,
+  "no-undef": false,
+  "no-lonely-if": false
+}
