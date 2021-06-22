@@ -13,6 +13,7 @@ function App() {
           alert(index);
         }}
         mode="vertical"
+        defaultOpenSubMenus={['3']}
       >
         <MenuItem>cool link</MenuItem>
         <MenuItem disabled>cool link</MenuItem>

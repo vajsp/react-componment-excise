@@ -51,6 +51,7 @@ const Menu: React.FC<MenuProps> = (props) => {
     index: CurrentActive ? CurrentActive : '0',
     onSelect: handleClick,
     mode: mode,
+    defaultOpenSubMenus,
   };
 
   const renderChildren = () => {
