@@ -6,7 +6,7 @@ import { MenuContext } from './menu';
 import { MenuItemProps } from './menulItem';
 
 export interface SubMenuProps {
-  index?: number;
+  index?: string;
   title: string;
   className?: string;
 }
@@ -63,7 +63,9 @@ const SubMenu: React.FC<SubMenuProps> = ({
       const childElement = child as FunctionComponentElement<MenuItemProps>;
       const { displayName } = childElement.type;
       if (displayName === 'MenuItem') {
-        return childElement;
+        return React.cloneElement(childElement, {
+          index: `${index}-${i}`,
+        });
       } else {
         console.log('这不是MenuItem');
       }

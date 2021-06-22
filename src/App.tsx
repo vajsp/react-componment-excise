@@ -8,11 +8,11 @@ function App() {
   return (
     <div className="App">
       <Menu
-        defaultIndex={0}
+        defaultIndex={'0'}
         onSelect={(index) => {
           alert(index);
         }}
-        // mode="vertical"
+        mode="vertical"
       >
         <MenuItem>cool link</MenuItem>
         <MenuItem disabled>cool link</MenuItem>
