@@ -3,10 +3,18 @@ import Button from './components/Button/button';
 import { Menu } from './components/Menu/menu';
 import { MenuItem } from './components/Menu/menulItem';
 import { SubMenu } from './components/Menu/subMenu';
+import Icon from './components/Icon/icon';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 function App() {
   return (
     <div className="App">
+      <Icon icon="coffee" theme="danger" size={`10x`}></Icon>
+
       <Menu
         defaultIndex={'0'}
         onSelect={(index) => {
