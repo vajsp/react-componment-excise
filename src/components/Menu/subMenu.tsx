@@ -6,6 +6,7 @@ import Icon from '../Icon/icon';
 import { MenuContext } from './menu';
 import { MenuItemProps } from './menulItem';
 import { CSSTransition } from 'react-transition-group';
+import Transition from '../Transition/transition';
 
 export interface SubMenuProps {
   index?: string;
@@ -82,15 +83,15 @@ const SubMenu: React.FC<SubMenuProps> = ({
     });
 
     return (
-      <CSSTransition
+      <Transition
         in={menuOpen}
         timeout={300}
-        classNames="zoom-in-top"
+        classNames="zoom-in-bottom"
         appear
         unmountOnExit
       >
         <ul className={subMenuClasses}>{childrenComponent}</ul>
-      </CSSTransition>
+      </Transition>
     );
   };
 
